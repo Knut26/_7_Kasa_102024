@@ -1,14 +1,17 @@
 import React from "react";
 import Navbar from "./assets/components/navbar.jsx";
 import Banner from "./assets/components/banner.jsx";
+import Cards from "./assets/components/cards.jsx";
 import "./app.scss";
 import "./assets/components/navbar.scss";
+import "./assets/components/cards.scss";
 
 function App() {
   return (
     <div>
       <Navbar />
       <Banner />
+      <Cards /> <Cards /> <Cards /> <Cards /> <Cards /> <Cards />
     </div>
   );
 }

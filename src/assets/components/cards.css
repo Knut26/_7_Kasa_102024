@@ -1,0 +1,19 @@
+.cards__container {
+  width: 400px;
+  height: 400px;
+}
+
+.card {
+  background: linear-gradient(#ff6060, #d56262);
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+}
+
+.card__text {
+  display: flex;
+  color: white;
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=cards.css.map */
