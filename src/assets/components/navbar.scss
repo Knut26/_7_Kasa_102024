@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  margin-right: auto;
+}
+
+.navbar__access {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  margin-right: 30px;
+  margin-left: auto;
+}
