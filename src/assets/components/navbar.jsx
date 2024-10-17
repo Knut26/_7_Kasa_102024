@@ -11,8 +11,8 @@ function Navbar() {
         />
       </div>
       <div className="navbar__access">
-        <div>Accueil</div>
-        <div>A propos</div>
+        <div className="navbar__access__accueil">Accueil</div>
+        <div className="navbar__access__a-propos">A propos</div>
       </div>
     </nav>
   );

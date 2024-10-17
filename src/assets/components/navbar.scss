@@ -1,6 +1,11 @@
+//-------------navbar---------
 .navbar {
   display: flex;
   margin-right: auto;
+}
+
+.navbar__logo-kasa {
+  width: 270px;
 }
 
 .navbar__access {
@@ -10,4 +15,47 @@
   width: 150px;
   margin-right: 30px;
   margin-left: auto;
+}
+
+.navbar__access__accueil:hover,
+.navbar__access__a-propos:hover {
+  text-decoration: underline;
+}
+//--------------banner-----------
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  width: 1230px;
+  height: 230px;
+  background-image: url(../../images/beach.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1230px;
+  height: 230px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+}
+
+.banner__text {
+  z-index: 2;
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
 }

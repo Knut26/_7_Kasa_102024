@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./assets/components/navbar.jsx";
+import Banner from "./assets/components/banner.jsx";
 import "./app.scss";
 import "./assets/components/navbar.scss";
 
@@ -7,6 +8,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      <Banner />
     </div>
   );
 }
