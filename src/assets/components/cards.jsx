@@ -6,6 +6,21 @@ function Cards() {
       <div className="card">
         <p className="card__text">Titre de la location</p>
       </div>
+      <div className="card">
+        <p className="card__text">Titre de la location</p>
+      </div>
+      <div className="card">
+        <p className="card__text">Titre de la location</p>
+      </div>
+      <div className="card">
+        <p className="card__text">Titre de la location</p>
+      </div>
+      <div className="card">
+        <p className="card__text">Titre de la location</p>
+      </div>
+      <div className="card">
+        <p className="card__text">Titre de la location</p>
+      </div>
     </div>
   );
 }

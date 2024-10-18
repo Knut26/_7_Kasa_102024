@@ -1,9 +1,11 @@
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
-  max-width: 1440px;
-  max-height: 1724px;
-  margin: 0 auto;
-  padding: 0;
+  height: 1517px;
+  min-height: 100vh;
   font-family: "roboto";
 }
 

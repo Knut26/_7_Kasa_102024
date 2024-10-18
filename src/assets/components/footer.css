@@ -1,0 +1,10 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  height: 209px;
+  background-color: black;
+}
+
+/*# sourceMappingURL=footer.css.map */

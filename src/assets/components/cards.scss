@@ -1,17 +1,29 @@
 .cards__container {
-  width: 400px;
-  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 1240px;
+  height: 100vh;
+  background-color: #f4f3f3;
+  border-radius: 25px;
+  margin-inline: auto;
+  margin-block: 50px;
 }
 
 .card {
+  display: flex;
+  flex-wrap: wrap;
   background: linear-gradient(#ff6060, #d56262);
-  width: 400px;
-  height: 400px;
-  margin: 20px;
+  width: 340px;
+  height: 340px;
+  border-radius: 15px;
 }
 
 .card__text {
   display: flex;
   color: white;
   font-size: 30px;
+  padding: 25px;
 }
