@@ -27,13 +27,8 @@
   text-decoration: underline;
 }
 //--------------banner-----------
-.banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.banner__container {
+.banner {
   position: relative;
   display: flex;
   align-items: center;
@@ -45,9 +40,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin: auto;
 }
 
-.banner__container::before {
+.banner::before {
   content: "";
   position: absolute;
   top: 0;
