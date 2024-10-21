@@ -28,13 +28,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .footer__logo__text__itself {
-    // centrer copyrights
-  }
-  .footer__logo__text {
-    font-size: 15px;
-    font-weight: 200;
-    width: 140px;
+    &__text {
+      font-size: 15px;
+      font-weight: 200;
+      width: 140px;
+    }
   }
 }
