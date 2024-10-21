@@ -3,7 +3,7 @@ import { StrictMode } from "react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import "../css_components/index.scss";
+import "../css_components/app.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
