@@ -28,7 +28,16 @@
     align-items: end;
     color: white;
     font-size: 30px;
-    padding: 25px;
-    width: min-content;
+    padding-left: 25px;
+    width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .cards__container {
+    background-color: white;
+  }
+  .card {
+    flex-basis: 100%;
   }
 }

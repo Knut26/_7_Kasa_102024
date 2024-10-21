@@ -11,10 +11,14 @@ import "../css_components/footer.scss";
 function App() {
   return (
     <div>
-      <Navbar />
-      <Banner />
-      <Cards />
-      <Footer />
+      <div className="body">
+        <Navbar />
+        <Banner />
+        <Cards />
+      </div>
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 }

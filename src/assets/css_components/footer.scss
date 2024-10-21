@@ -7,4 +7,34 @@
   width: 100%;
   height: 210px;
   background-color: black;
+  &__logo {
+    flex-direction: column;
+    &__itself {
+      display: flex;
+      justify-content: center;
+    }
+    &__kasa {
+      width: 150px;
+    }
+    &__text {
+      color: white;
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__logo__text__itself {
+    //width: 140px;
+  }
+  .footer__logo__text {
+    font-size: 15px;
+    font-weight: 200;
+    width: 140px;
+  }
 }
