@@ -1,5 +1,31 @@
-.test {
-  color: blueviolet;
+.error404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error404__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  color: #ff6060;
+  font-size: 200px;
+  font-weight: 500;
+}
+.error404__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff6060;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-top: 50px;
 }
 
 /*# sourceMappingURL=error404.css.map */

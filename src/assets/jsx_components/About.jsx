@@ -1,7 +1,8 @@
 import React from "react";
+import Navbar from "./navbar";
 
 function About() {
-  return <div className="about">About de la merde</div>;
+  return <Navbar />;
 }
 
 export default About;

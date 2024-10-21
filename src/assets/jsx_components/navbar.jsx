@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -12,12 +12,12 @@ function Navbar() {
         />
       </div>
       <div className="navbar__access">
-        <Link to="/">
+        <NavLink to="/">
           <div className="navbar__access__accueil">Accueil</div>
-        </Link>
-        <Link to="/about">
+        </NavLink>
+        <NavLink to="/about">
           <div className="navbar__access__a-propos">A propos</div>
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
