@@ -16,6 +16,10 @@
   flex-grow: 1;
 }
 
+.card a {
+  text-decoration: none;
+}
+
 .card {
   display: flex;
   background: linear-gradient(#ff6060, #d56262);

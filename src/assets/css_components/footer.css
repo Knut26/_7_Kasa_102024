@@ -2,9 +2,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1440px;
-  height: 209px;
+  width: 100%;
+  height: 210px;
   background-color: black;
+}
+.footer__logo {
+  flex-direction: column;
+}
+.footer__logo__itself {
+  display: flex;
+  justify-content: center;
+}
+.footer__logo__kasa {
+  width: 150px;
+}
+.footer__logo__text {
+  color: white;
+  font-size: 28px;
+}
+
+@media (max-width: 750px) {
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__logo__text {
+    font-size: 15px;
+    font-weight: 200;
+    width: 140px;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

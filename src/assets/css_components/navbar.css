@@ -2,16 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1240px;
-  height: 68px;
+  max-width: 1240px;
   margin: auto;
+  padding: 20px;
+  height: 68px;
 }
-
-.navbar__logo-kasa {
+.navbar__logo {
+  margin-top: 20px;
+}
+.navbar__logo__kasa {
   width: 200px;
   height: 68px;
 }
-
 .navbar__access {
   display: flex;
   align-items: center;
@@ -19,43 +21,60 @@
   width: 150px;
   margin-left: auto;
 }
-
-.navbar__access__accueil:hover,
-.navbar__access__a-propos:hover {
+.navbar__access__a-propos, .navbar__access__accueil {
+  color: black;
+  text-decoration: none;
+}
+.navbar__access__accueil:hover, .navbar__access__a-propos:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
+.navbar a {
+  text-decoration: none;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    margin: 30px 0 30px 0;
+    padding: 0;
+  }
+  .navbar__access {
+    justify-content: space-around;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .navbar__logo__kasa {
+    width: 150px;
+    height: 55px;
+  }
+}
 .banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.banner__container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   border-radius: 25px;
-  width: 1240px;
+  max-width: 1240px;
   height: 223px;
   background-image: url(../../images/beach.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin: auto;
+  padding: 20px;
 }
-
-.banner__container::before {
+.banner::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 1240px;
-  height: 223px;
-  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 25px;
 }
-
 .banner__text {
   z-index: 2;
   color: white;
