@@ -18,6 +18,12 @@
 
 .card a {
   text-decoration: none;
+  display: flex;
+  align-items: end;
+  color: white;
+  font-size: 30px;
+  padding-left: 25px;
+  width: 50%;
 }
 
 .card {
@@ -27,14 +33,6 @@
   height: 340px;
   border-radius: 15px;
   margin-block: 20px;
-  &__text {
-    display: flex;
-    align-items: end;
-    color: white;
-    font-size: 30px;
-    padding-left: 25px;
-    width: 50%;
-  }
 }
 
 @media (max-width: 750px) {

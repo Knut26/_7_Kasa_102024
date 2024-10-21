@@ -19,13 +19,27 @@
   align-items: center;
   color: #ff6060;
 }
+.error404__footer {
+  width: 100%;
+}
 
-a {
+.backToIndex {
+  height: 70px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: black;
   margin-top: 50px;
+}
+
+.backToIndex a {
+  color: black;
+}
+
+@media (max-width: 750px) {
+  .error404__number {
+    width: 200px;
+    height: 200px;
+    font-size: 100px;
+  }
 }
 
 /*# sourceMappingURL=error404.css.map */

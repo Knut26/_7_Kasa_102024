@@ -10,9 +10,15 @@ function Error404() {
       <div className="error404">
         <div className="error404__number">404</div>
       </div>
-      <div className="error404__text">Oups! La page demandée n'existe pas.</div>
-      <NavLink to="/">Retourner sur la page d'accueil</NavLink>
-      <Footer />;
+      <div className="error404__text">
+        Oups! La page que vous demandez n'existe pas.
+      </div>
+      <div className="backToIndex">
+        <NavLink to="/">Retourner sur la page d'accueil</NavLink>
+      </div>
+      <div className="error404__footer">
+        <Footer />
+      </div>
     </div>
   );
 }
