@@ -11,21 +11,52 @@ function Apparts() {
     <div>
       <Navbar />
       <div className="apparts__main">
-        <img
-          className="navbar__logo__kasa"
-          src="src/images/landscape.png"
-          alt="Logo Kasa"
-        />
-        <h1 className="apparts__title">Cozy loft on Canal Saint-Martin</h1>
-        <h3 className="apparts__subtitle">Paris, Île-de-France</h3>
-        <h4 className="apparts__owner">Alexandre Dumas</h4>
-        <div className="apparts__owner__picture"></div>
-        <div className="apparts__owner__rating">
-          <FontAwesomeIcon icon={faStarSolid} size="xl" />
-          <FontAwesomeIcon icon={faStarSolid} size="xl" />
-          <FontAwesomeIcon icon={faStarSolid} size="xl" />
-          <FontAwesomeIcon icon={faStarRegular} size="xl" />
-          <FontAwesomeIcon icon={faStarRegular} size="xl" />
+        <div className="apparts__image__container">
+          <img
+            className="apparts__image"
+            src="src/images/landscape.png"
+            alt="Logo Kasa"
+          />
+        </div>
+        <div className="apparts__title__and__owner">
+          <h1 className="apparts__title">Cozy loft on Canal Saint-Martin</h1>
+          <h4 className="apparts__owner">Alexandre Dumas</h4>
+          <div className="apparts__owner__picture"></div>
+        </div>
+        <p className="apparts__subtitle">Paris, Île-de-France</p>
+        <div className="apparts__owner__tag__and__ratings">
+          <div className="apparts__owner__tag">
+            <div className="cosy">Cosy</div>
+            <div className="canal">Canal</div>
+            <div className="paris10">Paris 10</div>
+          </div>
+          <div className="apparts__owner__rating">
+            <FontAwesomeIcon
+              icon={faStarSolid}
+              size="xl"
+              className="apparts__owner__rating__stars"
+            />
+            <FontAwesomeIcon
+              icon={faStarSolid}
+              size="xl"
+              className="apparts__owner__rating__stars"
+            />
+            <FontAwesomeIcon
+              icon={faStarSolid}
+              size="xl"
+              className="apparts__owner__rating__stars"
+            />
+            <FontAwesomeIcon
+              icon={faStarRegular}
+              size="xl"
+              className="apparts__owner__rating__stars"
+            />
+            <FontAwesomeIcon
+              icon={faStarRegular}
+              size="xl"
+              className="apparts__owner__rating__stars"
+            />
+          </div>
         </div>
       </div>
       <Footer />

@@ -23,7 +23,6 @@
 }
 .navbar__access__a-propos, .navbar__access__accueil {
   color: black;
-  text-decoration: none;
 }
 .navbar__access__accueil:hover, .navbar__access__a-propos:hover {
   text-decoration: underline;

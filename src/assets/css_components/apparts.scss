@@ -1,1 +1,62 @@
+.apparts__main {
+  // margin: auto;
+}
 
+.appart__title__and__owner {
+  display: flex;
+}
+.apparts__title,
+.apparts__owner {
+  color: #ff6060;
+}
+
+.apparts__owner__picture {
+  width: 80px;
+  height: 80px;
+  background-color: lightgray;
+  border-radius: 50px;
+}
+
+.apparts__title {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.apparts__image {
+  max-width: 1240px;
+  width: 100%;
+  height: 550px;
+  border-radius: 25px;
+  object-fit: cover;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.apparts__owner__rating {
+  display: flex;
+  justify-content: end;
+  &__stars {
+    color: #ff6060;
+  }
+}
+
+.apparts__owner__tag {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cosy,
+.canal,
+.paris10 {
+  border: 1px solid red;
+  border-radius: 25px;
+  background-color: #ff6060;
+  color: white;
+  font-size: 20px;
+  width: 100px;
+  padding-inline: 20px;
+}
