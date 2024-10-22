@@ -54,6 +54,9 @@
 .apparts__owner__rating__stars {
   color: #ff6060;
 }
+.apparts__owner__rating__stars__grey {
+  color: lightgray;
+}
 
 .apparts__owner__tag {
   display: flex;

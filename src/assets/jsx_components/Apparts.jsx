@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
-import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 
 import Navbar from "./navbar";
 import Footer from "./footer";
@@ -46,14 +45,14 @@ function Apparts() {
                   className="apparts__owner__rating__stars"
                 />
                 <FontAwesomeIcon
-                  icon={faStarRegular}
+                  icon={faStarSolid}
                   size="xl"
-                  className="apparts__owner__rating__stars"
+                  className="apparts__owner__rating__stars__grey"
                 />
                 <FontAwesomeIcon
-                  icon={faStarRegular}
+                  icon={faStarSolid}
                   size="xl"
-                  className="apparts__owner__rating__stars"
+                  className="apparts__owner__rating__stars__grey"
                 />
               </div>
             </div>
