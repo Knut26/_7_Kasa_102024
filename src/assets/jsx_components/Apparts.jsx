@@ -1,4 +1,8 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
+
 import Navbar from "./navbar";
 import Footer from "./footer";
 
@@ -17,11 +21,11 @@ function Apparts() {
         <h4 className="apparts__owner">Alexandre Dumas</h4>
         <div className="apparts__owner__picture"></div>
         <div className="apparts__owner__rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
+          <FontAwesomeIcon icon={faStarSolid} size="xl" />
+          <FontAwesomeIcon icon={faStarSolid} size="xl" />
+          <FontAwesomeIcon icon={faStarSolid} size="xl" />
+          <FontAwesomeIcon icon={faStarRegular} size="xl" />
+          <FontAwesomeIcon icon={faStarRegular} size="xl" />
         </div>
       </div>
       <Footer />
