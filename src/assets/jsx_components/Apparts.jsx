@@ -22,39 +22,37 @@ function Apparts() {
             <h1 className="apparts__title">Cozy loft on Canal Saint-Martin</h1>
             <p className="apparts__subtitle">Paris, Île-de-France</p>
           </div>
-          <div className="apparts__owner__rating">
-            <div className="apparts__owner__and__rating">
-              <div className="apparts__owner_and__picture">
-                <h4 className="apparts__owner">Alexandre Dumas</h4>
-                <div className="apparts__owner__picture"></div>
-              </div>
-              <div className="apparts__owner__and__rating__itself">
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars__grey"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars__grey"
-                />
-              </div>
+          <div className="apparts__owner__and__rating">
+            <div className="apparts__owner_and__picture">
+              <h4 className="apparts__owner">Alexandre Dumas</h4>
+              <div className="apparts__owner__picture"></div>
+            </div>
+            <div className="apparts__owner__and__rating__itself">
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars__grey"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars__grey"
+              />
             </div>
           </div>
         </div>
