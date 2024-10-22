@@ -1,22 +1,20 @@
-.appart__title__and__owner {
-  display: flex;
-}
-
 .apparts__title,
 .apparts__owner {
   color: #ff6060;
 }
 
-.apparts__owner__picture {
-  width: 80px;
-  height: 80px;
-  background-color: lightgray;
-  border-radius: 50px;
-}
-
 .apparts__title {
   font-size: 50px;
   font-weight: 300;
+  margin-bottom: 0;
+}
+.apparts__title__subtitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.apparts__subtitle {
+  font-size: 25px;
 }
 
 .apparts__image {
@@ -30,6 +28,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.apparts__owner {
+  width: 140px;
+  font-size: 30px;
+  font-weight: 300;
+}
+.apparts__owner__picture {
+  align-self: center;
+  width: 80px;
+  height: 80px;
+  background-color: lightgray;
+  border-radius: 50px;
+}
+.apparts__owner__and__picture {
+  display: flex;
+  flex-direction: row;
 }
 
 .apparts__owner__rating {
