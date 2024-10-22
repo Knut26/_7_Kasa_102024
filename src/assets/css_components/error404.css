@@ -40,6 +40,13 @@
     height: 200px;
     font-size: 100px;
   }
+  .error404__text {
+    font-size: 20px;
+    height: 210px;
+  }
+  .backToIndex {
+    height: 110px;
+  }
 }
 
 /*# sourceMappingURL=error404.css.map */

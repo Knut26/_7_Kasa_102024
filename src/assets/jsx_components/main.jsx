@@ -28,10 +28,6 @@ const router = createBrowserRouter([
     element: <About />,
     errorElement: <Error404 />,
   },
-  {
-    path: "/error404",
-    element: <Error404 />,
-  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

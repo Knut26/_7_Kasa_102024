@@ -4,13 +4,15 @@ import { Outlet, NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="navbar__logo">
-        <img
-          className="navbar__logo__kasa"
-          src="src/images/Logo Kasa.png"
-          alt="Logo Kasa"
-        />
-      </div>
+      <NavLink to="/">
+        <div className="navbar__logo">
+          <img
+            className="navbar__logo__kasa"
+            src="src/images/Logo Kasa.png"
+            alt="Logo Kasa"
+          />
+        </div>
+      </NavLink>
       <div className="navbar__access">
         <NavLink to="/">
           <div className="navbar__access__accueil">Accueil</div>
