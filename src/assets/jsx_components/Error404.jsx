@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./navbar";
 import { NavLink } from "react-router-dom";
+import Navbar from "./navbar";
 import Footer from "./footer";
 
 function Error404() {
@@ -16,9 +16,7 @@ function Error404() {
       <div className="backToIndex">
         <NavLink to="/">Retourner sur la page d'accueil</NavLink>
       </div>
-      <div className="error404__footer">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }
