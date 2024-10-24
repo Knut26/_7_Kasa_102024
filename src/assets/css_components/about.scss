@@ -77,3 +77,39 @@
 .about__collapse2__contentBox .active {
   height: 150px;
 }
+
+.about__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-inline: 150px;
+  margin-block: 50px;
+}
+
+$accordion-button-bg: #ff6060;
+$accordion-bg: rgb(229, 227, 227);
+$accordion-color: white;
+$accordion-button-color: white;
+$accordion-button-active-color: white;
+$accordion-button-focus-border-color: none;
+$accordion-button-focus-box-shadow: none;
+$accordion-icon-color: white;
+$accordion-icon-active-color: white;
+$accordion-icon-width: 30px;
+$accordion-border-radius: 10px;
+$accordion-inner-border-radius: 10px;
+$accordion-icon-transition: transform 0.2s ease-in-out;
+$accordion-icon-transform: rotate(180deg);
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+.about__accordion__header {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.about__accordion-content {
+  color: rgb(67, 66, 66);
+}

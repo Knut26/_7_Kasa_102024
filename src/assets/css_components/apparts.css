@@ -29,6 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 680px;
 }
 
 .apparts__owner {
@@ -70,16 +71,15 @@
   background-color: #ff6060;
   color: white;
   font-size: 20px;
-  width: 100px;
-  padding-inline: 20px;
-  padding-block: 3px;
+  width: 150px;
+  padding-block: 2px;
 }
 
 .apparts__accordion {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  margin-inline: 100px;
+  margin-inline: 150px;
   margin-bottom: 50px;
 }
 

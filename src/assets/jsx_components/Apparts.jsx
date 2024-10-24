@@ -65,7 +65,7 @@ function Apparts() {
         </div>
         <div className="apparts__accordion">
           {data.map((item) => (
-            <Accordion>
+            <Accordion defaultActiveKey={0}>
               <Accordion.Item className="accordion-item">
                 <Accordion.Header className="apparts__accordion__header">
                   {item.apparts__accordion__title}
