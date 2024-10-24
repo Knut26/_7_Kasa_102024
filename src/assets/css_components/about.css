@@ -28,60 +28,7 @@
 
 .about__footer {
   width: 100%;
-  position: absolute;
   bottom: 0;
-}
-
-.about__collapse1__and__2 {
-  display: flex;
-  max-width: 1000px;
-}
-
-.about__collapse1,
-.about__collapse2,
-.about__collapse3,
-.about__collapse4 {
-  display: flex;
-}
-.about__collapse1__contentBox,
-.about__collapse2__contentBox,
-.about__collapse3__contentBox,
-.about__collapse4__contentBox {
-  position: relative;
-  margin: 10px 20px;
-}
-.about__collapse1__label,
-.about__collapse2__label,
-.about__collapse3__label,
-.about__collapse4__label {
-  position: relative;
-  padding: 10px;
-  background-color: #ff6060;
-  color: white;
-  cursor: pointer;
-}
-.about__collapse1__label::after,
-.about__collapse2__label::after,
-.about__collapse3__label::after,
-.about__collapse4__label::after {
-  position: absolute;
-  top: 7px;
-  right: 10px;
-  transform: translateY(-50%);
-}
-.about__collapse1__content,
-.about__collapse2__content,
-.about__collapse3__content,
-.about__collapse4__content {
-  position: relative;
-  overflow: hidden;
-  transition: 500ms;
-  overflow-y: auto;
-}
-
-.about__collapse1__contentBox .active,
-.about__collapse2__contentBox .active {
-  height: 150px;
 }
 
 /*!
@@ -11933,6 +11880,7 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  min-height: 500px;
   margin-inline: 260px;
   margin-block: 50px;
 }

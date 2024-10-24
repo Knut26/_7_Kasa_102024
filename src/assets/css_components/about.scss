@@ -29,53 +29,7 @@
 
 .about__footer {
   width: 100%;
-  position: absolute;
   bottom: 0;
-}
-
-.about__collapse1__and__2 {
-  display: flex;
-  max-width: 1000px;
-}
-
-.about__collapse1,
-.about__collapse2,
-.about__collapse3,
-.about__collapse4 {
-  display: flex;
-  &__contentBox {
-    position: relative;
-    margin: 10px 20px;
-  }
-  &__label {
-    position: relative;
-    padding: 10px;
-    background-color: #ff6060;
-    color: white;
-    cursor: pointer;
-    &::after {
-      position: absolute;
-      top: 7px;
-      right: 10px;
-      //font-family: "Font Awesome 5 Free";
-      //content:"\f077";
-      //content: "⌄";
-      //content:"&#x3e";
-      transform: translateY(-50%);
-    }
-  }
-  &__content {
-    position: relative;
-    //height: 0;
-    overflow: hidden;
-    transition: 500ms;
-    overflow-y: auto;
-  }
-}
-
-.about__collapse1__contentBox .active,
-.about__collapse2__contentBox .active {
-  height: 150px;
 }
 
 $accordion-button-bg: #ff6060;
@@ -98,6 +52,7 @@ $accordion-icon-transform: rotate(180deg);
   display: flex;
   flex-direction: column;
   gap: 50px;
+  min-height: 500px;
   margin-inline: 260px;
   margin-block: 50px;
   &__header {
