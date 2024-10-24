@@ -1,7 +1,7 @@
 import React from "react";
 import { Accordion, AccordionItem } from "react-bootstrap";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "../NavbarAndBanner_components/navbar";
+import Footer from "../Footer_components/footer";
 
 function About() {
   return (

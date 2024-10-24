@@ -3,14 +3,18 @@ import { StrictMode } from "react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.jsx";
-import "../css_components/app.scss";
-import Apparts from "./Apparts.jsx";
-import "../css_components/apparts.scss";
-import About from "./About.jsx";
-import "../css_components/about.scss";
-import Error404 from "./Error404.jsx";
-import "../css_components/error404.scss";
+
+import App from "../App_components/App.jsx";
+import "../App_components/app.scss";
+
+import Apparts from "../Apparts_components/Apparts.jsx";
+import "../Apparts_components/apparts.scss";
+
+import About from "../About_components/About.jsx";
+import "../About_components/about.scss";
+
+import Error404 from "../Error404_components/Error404.jsx";
+import "../Error404_components/error404.scss";
 
 const router = createBrowserRouter([
   {

@@ -1,11 +1,11 @@
 import React from "react";
 import { Accordion, AccordionItem } from "react-bootstrap";
-import "../css_components/apparts.scss";
+import "../Apparts_components/apparts.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
 
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "../NavbarAndBanner_components/navbar";
+import Footer from "../Footer_components/footer";
 
 function Apparts() {
   return (
