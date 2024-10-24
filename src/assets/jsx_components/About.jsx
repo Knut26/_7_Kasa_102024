@@ -16,7 +16,7 @@ function About() {
                 {item.about__accordion__title}
               </Accordion.Header>
             </Accordion.Item>
-            <Accordion.Item className="about__accordion-content">
+            <Accordion.Item className="about__accordion__content">
               <Accordion.Body>{item.about__accordion__content}</Accordion.Body>
             </Accordion.Item>
           </Accordion>

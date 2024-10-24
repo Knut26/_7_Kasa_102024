@@ -84,14 +84,6 @@
   height: 150px;
 }
 
-.about__accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  margin-inline: 150px;
-  margin-block: 50px;
-}
-
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -11937,14 +11929,23 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.about__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-inline: 260px;
+  margin-block: 50px;
+}
 .about__accordion__header:focus {
   outline: none;
   box-shadow: none;
-  border: none;
 }
-
-.about__accordion-content {
+.about__accordion__content {
   color: rgb(67, 66, 66);
+}
+.about__accordion__content:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=about.css.map */

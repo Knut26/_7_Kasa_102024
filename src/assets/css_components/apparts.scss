@@ -75,14 +75,6 @@
   padding-block: 2px;
 }
 
-.apparts__accordion {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin-inline: 150px;
-  margin-bottom: 50px;
-}
-
 $accordion-button-bg: #ff6060;
 $accordion-bg: rgb(229, 227, 227);
 $accordion-color: white;
@@ -99,14 +91,20 @@ $accordion-icon-transition: transform 0.2s ease-in-out;
 $accordion-icon-transform: rotate(180deg);
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-.apparts__accordion__header {
-  &:focus {
-    outline: none;
-    box-shadow: none;
-    border: none;
+.apparts__accordion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-inline: 150px;
+  margin-bottom: 50px;
+  &__header {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border: none;
+    }
   }
-}
-
-.accordion-content {
-  color: rgb(67, 66, 66);
+  &__content {
+    color: rgb(67, 66, 66);
+  }
 }
