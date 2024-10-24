@@ -71,7 +71,7 @@ function Apparts() {
                   {item.apparts__accordion__title}
                 </Accordion.Header>
               </Accordion.Item>
-              <Accordion.Item className="accordion-item">
+              <Accordion.Item className="accordion-content">
                 <Accordion.Body>
                   {item.apparts__accordion__content}
                 </Accordion.Body>
