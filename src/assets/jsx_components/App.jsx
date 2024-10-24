@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../css_components/app.scss";
 import Banner from "./banner.jsx";
 import Navbar from "./navbar.jsx";

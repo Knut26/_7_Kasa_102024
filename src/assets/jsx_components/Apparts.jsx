@@ -1,4 +1,6 @@
 import React from "react";
+import { Accordion, AccordionItem } from "react-bootstrap";
+import "../css_components/apparts.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
 
@@ -61,40 +63,21 @@ function Apparts() {
           <div className="canal">Canal</div>
           <div className="paris10">Paris 10</div>
         </div>
-        <div className="apparts__collapse1__and__2">
-          <div className="apparts__collapse1">
-            <div className="apparts__collapse1__contentBox">
-              <div className="apparts__collapse1__label">Description</div>
-              <div className="apparts__collapse1__content">
-                <p>
-                  Vous serez à 50m du canal Saint-Martin où vous pourrez
-                  pique-niquer l'été et à côté de nombreux bars et restaurants.
-                  Au coeur de Paris avec 5 lignes de métro et de nombreux bus.
-                  Logement parfait pour les voyageurs en solo et les voyageurs
-                  d'affaires. Vous êtes à 1 station de la gare de l'Est (7
-                  minutes à pieds).
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="apparts__collapse2">
-            <div className="apparts__collapse2__contentBox">
-              <div className="apparts__collapse2__label">Equipements</div>
-              <div className="apparts__collapse2__content">
-                <p>
-                  <ul>
-                    <li>Climatisation</li>
-                    <li>Wi-Fi</li>
-                    <li>Cuisine</li>
-                    <li>Espace de travail</li>
-                    <li>Fer à repasser</li>
-                    <li>Sèche-cheveux</li>
-                    <li>Cintres</li>
-                  </ul>
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="apparts__accordion">
+          {data.map((item) => (
+            <Accordion>
+              <Accordion.Item className="accordion-item">
+                <Accordion.Header className="apparts__accordion__header">
+                  {item.apparts__accordion__title}
+                </Accordion.Header>
+              </Accordion.Item>
+              <Accordion.Item className="accordion-item">
+                <Accordion.Body>
+                  {item.apparts__accordion__content}
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          ))}
         </div>
       </div>
       <Footer />
@@ -102,19 +85,23 @@ function Apparts() {
   );
 }
 
-// const collapse1 = document.getElementByClassName("collapse1__contentBox");
-
-// for (let i = 0; i < collapse1.length; i++) {
-//   collapse1[i].addEventListener("click", () => {
-//     this.classList.toggle("active");
-//   });
-// }
-// const collapse2 = document.getElementByClassName("collapse2__contentBox");
-
-// for (let i = 0; i < collapse2.length; i++) {
-//   collapse2[i].addEventListener("click", () => {
-//     this.classList.toggle("active");
-//   });
-// }
+const data = [
+  {
+    apparts__accordion__title: "Description",
+    apparts__accordion__content: `Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au coeur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à 1 station de la gare de l'Est (7 minutes à pieds).`,
+  },
+  {
+    apparts__accordion__title: "Equipements",
+    apparts__accordion__content: [
+      "Climatisation",
+      "Wi-Fi",
+      "Cuisine",
+      "Espace de travail",
+      "Fer à repasser",
+      "Sèche-cheveux",
+      "Cintres",
+    ],
+  },
+];
 
 export default Apparts;

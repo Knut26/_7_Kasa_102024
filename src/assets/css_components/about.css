@@ -73,7 +73,6 @@
 .about__collapse3__content,
 .about__collapse4__content {
   position: relative;
-  height: 0;
   overflow: hidden;
   transition: 500ms;
   overflow-y: auto;
