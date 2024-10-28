@@ -3,20 +3,38 @@ import { Accordion, AccordionItem } from "react-bootstrap";
 import "../Apparts_components/apparts.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft as faAngleLeftSolid } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight as faAngleRightSolid } from "@fortawesome/free-solid-svg-icons";
 
 import Navbar from "../NavbarAndBanner_components/navbar";
 import Footer from "../Footer_components/footer";
+import Banner from "../NavbarAndBanner_components/banner.jsx";
 
 function Apparts() {
+  fetch("src/images/appartements.json")
+    .then((res) => res.json())
+    .then((response) => console.log(response))
+    .catch(console.error);
+
   return (
     <div>
       <Navbar />
       <div className="apparts__main">
         <div className="apparts__image__container">
+          <FontAwesomeIcon
+            icon={faAngleLeftSolid}
+            size="xl"
+            className="apparts__image__container__arrowleft"
+          />
           <img
             className="apparts__image"
             src="src/images/landscape.png"
             alt="Logo Kasa"
+          />
+          <FontAwesomeIcon
+            icon={faAngleRightSolid}
+            size="xl"
+            className="apparts__image__container__arrowright"
           />
         </div>
         <div className="apparts__title__and__owner">
