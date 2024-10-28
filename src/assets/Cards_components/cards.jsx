@@ -14,31 +14,6 @@ function Cards() {
           <p className="card__text">Titre de la location</p>
         </Link>
       </div>
-      <div className="card">
-        <Link to="/apparts">
-          <p className="card__text">Titre de la location</p>
-        </Link>
-      </div>
-      <div className="card">
-        <Link to="/apparts">
-          <p className="card__text">Titre de la location</p>
-        </Link>
-      </div>
-      <div className="card">
-        <Link to="/apparts">
-          <p className="card__text">Titre de la location</p>
-        </Link>
-      </div>
-      <div className="card">
-        <Link to="/apparts">
-          <p className="card__text">Titre de la location</p>
-        </Link>
-      </div>
-      <div className="card">
-        <Link to="/apparts">
-          <p className="card__text">Titre de la location</p>
-        </Link>
-      </div>
     </div>
   );
 }
