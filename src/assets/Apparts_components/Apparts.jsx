@@ -1,15 +1,15 @@
 import React from "react";
+import Navbar from "../NavbarAndBanner_components/navbar";
+import Footer from "../Footer_components/footer";
+import Banner from "../NavbarAndBanner_components/banner.jsx";
 import Carousel from "../Carousel_components/carousel.jsx";
-import { Accordion, AccordionItem } from "react-bootstrap";
+import "../Carousel_components/carousel.scss";
 import "../Apparts_components/apparts.scss";
+import { Accordion, AccordionItem } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
 // import { faAngleLeft as faAngleLeftSolid } from "@fortawesome/free-solid-svg-icons";
 // import { faAngleRight as faAngleRightSolid } from "@fortawesome/free-solid-svg-icons";
-
-import Navbar from "../NavbarAndBanner_components/navbar";
-import Footer from "../Footer_components/footer";
-import Banner from "../NavbarAndBanner_components/banner.jsx";
 
 function Apparts() {
   fetch("src/images/appartements.json")
@@ -32,6 +32,7 @@ function Apparts() {
             src="src/images/landscape.png"
             alt="Logo Kasa"
           />
+          <Carousel />
           {/* <FontAwesomeIcon
             icon={faAngleRightSolid}
             size="xl"
