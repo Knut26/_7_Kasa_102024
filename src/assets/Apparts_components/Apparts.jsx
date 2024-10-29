@@ -1,10 +1,11 @@
 import React from "react";
+import Carousel from "../Carousel_components/carousel.jsx";
 import { Accordion, AccordionItem } from "react-bootstrap";
 import "../Apparts_components/apparts.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
-import { faAngleLeft as faAngleLeftSolid } from "@fortawesome/free-solid-svg-icons";
-import { faAngleRight as faAngleRightSolid } from "@fortawesome/free-solid-svg-icons";
+// import { faAngleLeft as faAngleLeftSolid } from "@fortawesome/free-solid-svg-icons";
+// import { faAngleRight as faAngleRightSolid } from "@fortawesome/free-solid-svg-icons";
 
 import Navbar from "../NavbarAndBanner_components/navbar";
 import Footer from "../Footer_components/footer";
@@ -21,21 +22,21 @@ function Apparts() {
       <Navbar />
       <div className="apparts__main">
         <div className="apparts__image__container">
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faAngleLeftSolid}
             size="xl"
             className="apparts__image__container__arrowleft"
-          />
+          /> */}
           <img
             className="apparts__image"
             src="src/images/landscape.png"
             alt="Logo Kasa"
           />
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faAngleRightSolid}
             size="xl"
             className="apparts__image__container__arrowright"
-          />
+          /> */}
         </div>
         <div className="apparts__title__and__owner">
           <div className="apparts__title__subtitle">
