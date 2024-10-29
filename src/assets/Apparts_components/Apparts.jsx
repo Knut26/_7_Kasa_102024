@@ -5,6 +5,7 @@ import Banner from "../NavbarAndBanner_components/banner.jsx";
 import Carousel from "../Carousel_components/carousel.jsx";
 import "../Carousel_components/carousel.scss";
 import "../Apparts_components/apparts.scss";
+import { slides } from "../../images/appartements.json";
 import { Accordion, AccordionItem } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
@@ -27,12 +28,7 @@ function Apparts() {
             size="xl"
             className="apparts__image__container__arrowleft"
           /> */}
-          <img
-            className="apparts__image"
-            src="src/images/landscape.png"
-            alt="Logo Kasa"
-          />
-          <Carousel />
+          <Carousel data={slides} />
           {/* <FontAwesomeIcon
             icon={faAngleRightSolid}
             size="xl"
