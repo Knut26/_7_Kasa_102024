@@ -4,14 +4,15 @@ import Footer from "../Footer_components/footer";
 import Carousel from "../Carousel_components/carousel.jsx";
 import "../Carousel_components/carousel.scss";
 import "../Apparts_components/apparts.scss";
-import { slides } from "../../images/appartements.json";
+import slides from "../../images/appartements.json";
 import { Accordion, AccordionItem } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
+
 function Apparts() {
   fetch("src/images/appartements.json")
     .then((res) => res.json())
-    .then((response) => console.log(response))
+    //.then((response) => console.log(response))
     .catch(console.error);
 
   return (
@@ -19,6 +20,13 @@ function Apparts() {
       <Navbar />
       <div className="apparts__main">
         <div className="apparts__image__container">
+          {slides.map((slide, index0) => {
+            return (
+              <div className="box" key={index0}>
+                {slide.title}
+              </div>
+            );
+          })}
           <Carousel data={slides} />
         </div>
         <div className="apparts__title__and__owner">

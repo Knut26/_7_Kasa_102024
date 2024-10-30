@@ -126,3 +126,7 @@ $accordion-icon-transform: rotate(180deg);
     color: rgb(67, 66, 66);
   }
 }
+.apparts__image__container {
+  display: flex;
+  flex-direction: column;
+}
