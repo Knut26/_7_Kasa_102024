@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./carousel.scss";
-import { slides } from "../../images/appartements.json";
+//import { slides } from "../../images/appartements.json";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export const Carousel = ({ data }) => {
