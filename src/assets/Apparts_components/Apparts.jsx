@@ -20,15 +20,15 @@ function Apparts() {
       <Navbar />
       <div className="apparts__main">
         <div className="apparts__image__container">
-          {slides.map((slide, index0) => {
-            // return (
-            //   <div className="box" key={index0}>
-            //     {slide.title}
-            //   </div>
-            // );
-          })}
           <Carousel data={slides} />
         </div>
+        {slides.map((slide, index0) => {
+          // return (
+          //   <div className="box" key={index0}>
+          //     {slide.title}
+          //   </div>
+          // );
+        })}
         <div className="apparts__title__and__owner">
           <div className="apparts__title__subtitle">
             <h1 className="apparts__title">Cozy loft on Canal Saint-Martin</h1>
