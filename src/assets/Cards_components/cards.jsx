@@ -1,7 +1,8 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
-function Cards() {
+function Cards(props) {
+  console.log(props);
   fetch("src/images/appartements.json")
     .then((res) => res.json())
     .then((response) => console.log(response))
@@ -11,7 +12,7 @@ function Cards() {
     <div className="cards__container">
       <div className="card">
         <Link to="/apparts">
-          <p className="card__text">Titre de la location</p>
+          <p className="card__text">{props.title}</p>
         </Link>
       </div>
     </div>
