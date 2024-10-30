@@ -7,21 +7,21 @@ import "../NavbarAndBanner_components/navbar.scss";
 import Cards from "../Cards_components/cards.jsx";
 import "../Cards_components/cards.scss";
 import slides from "../../images/appartements.json";
-import Carousel from "../Carousel_components/carousel.jsx";
-import "../Carousel_components/carousel.scss";
 import Footer from "../Footer_components/footer.jsx";
 import "../Footer_components/footer.scss";
 
 function App(props) {
-  console.log(props);
+  //console.log(props);
   return (
     <div>
       <div className="body">
         <Navbar />
         <Banner />
-        {slides.map((slide) => (
-          <Cards title={slide.title} img={slide.cover} />
-        ))}
+        <div className="cards__container">
+          {slides.map((slide, index1) => (
+            <Cards title={slide.title} img={slide.cover} key={index1} />
+          ))}
+        </div>
       </div>
       <div className="footer">
         <Footer />
