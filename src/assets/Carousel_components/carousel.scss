@@ -9,17 +9,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
-  max-width: 1240px;
-  height: 550px;
+  width: 1240px;
+  height: auto;
   border-radius: 25px;
-  object-fit: cover;
   &__slides {
     width: 100%;
-    height: 100%;
+    height: 550px;
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 25px;
+    object-fit: cover;
     &__hidden {
       display: none;
     }
@@ -28,10 +27,9 @@
     position: absolute;
     top: 50%;
     left: 20px;
-    width: 80px;
-    height: 80px;
-    color: red;
-    filter: drop-shadow(0, 0, 5px lightgray); /////////////:utile??
+    width: 50px;
+    height: 50px;
+    color: white;
     &:hover {
       cursor: pointer;
     }
@@ -40,9 +38,9 @@
     position: absolute;
     top: 50%;
     right: 20px;
-    width: 80px;
-    height: 80px;
-    color: red;
+    width: 50px;
+    height: 50px;
+    color: white;
     &:hover {
       cursor: pointer;
     }
@@ -51,16 +49,7 @@
     display: flex;
     position: absolute;
     bottom: 20px;
-  }
-  &__indicator {
-    background-color: white;
-    height: 10px;
-    width: 10px;
-    border: none;
-    border-radius: 25px;
-    outline: none;
-    box-shadow: 0 0 5px lightgray;
-    margin: 0 2px;
-    cursor: pointer;
+    color: white;
+    font-size: 20px;
   }
 }

@@ -7,12 +7,25 @@ export const Carousel = ({ data }) => {
   console.log(data);
   const [carousel__slides, carousel__setSlides] = useState(0);
 
+  const nextSlide = () => {
+    carousel__setSlides(
+      carousel__slides === data.length - 1 ? 0 : carousel__slides + 1
+    );
+  };
+
+  const prevSlide = () => {
+    carousel__setSlides(
+      carousel__slides === 0 ? data.length - 1 : carousel__slides - 1
+    );
+  };
+
   return (
     <div className="carousel">
-      <IoIosArrowBack className="carousel__leftArrow" />
+      <IoIosArrowBack className="carousel__leftArrow" onClick={prevSlide} />
       {data.map((item, index) => {
         return (
           <img
+            key={index}
             className={
               carousel__slides === index
                 ? "carousel__slides"
@@ -23,17 +36,9 @@ export const Carousel = ({ data }) => {
           />
         );
       })}
-      <IoIosArrowForward className="carousel__rightArrow" />
+      <IoIosArrowForward className="carousel__rightArrow" onClick={nextSlide} />
       <span className="carousel__indicators">
-        {data.map((_, index) => {
-          return (
-            <button
-              key={index}
-              onClick={null}
-              className="carousel__indicator"
-            ></button>
-          );
-        })}
+        {carousel__slides + 1} / {data.length}
       </span>
     </div>
   );

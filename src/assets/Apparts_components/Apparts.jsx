@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../NavbarAndBanner_components/navbar";
 import Footer from "../Footer_components/footer";
-import Banner from "../NavbarAndBanner_components/banner.jsx";
 import Carousel from "../Carousel_components/carousel.jsx";
 import "../Carousel_components/carousel.scss";
 import "../Apparts_components/apparts.scss";
@@ -9,9 +8,9 @@ import { slides } from "../../images/appartements.json";
 import { Accordion, AccordionItem } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
-// import { faAngleLeft as faAngleLeftSolid } from "@fortawesome/free-solid-svg-icons";
-// import { faAngleRight as faAngleRightSolid } from "@fortawesome/free-solid-svg-icons";
-
+// for (let i = 0; i < slides.length; i++) {
+//   console.log(slides[i].pictures);
+// }
 function Apparts() {
   fetch("src/images/appartements.json")
     .then((res) => res.json())
@@ -23,17 +22,7 @@ function Apparts() {
       <Navbar />
       <div className="apparts__main">
         <div className="apparts__image__container">
-          {/* <FontAwesomeIcon
-            icon={faAngleLeftSolid}
-            size="xl"
-            className="apparts__image__container__arrowleft"
-          /> */}
           <Carousel data={slides} />
-          {/* <FontAwesomeIcon
-            icon={faAngleRightSolid}
-            size="xl"
-            className="apparts__image__container__arrowright"
-          /> */}
         </div>
         <div className="apparts__title__and__owner">
           <div className="apparts__title__subtitle">
