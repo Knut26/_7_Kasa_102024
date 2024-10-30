@@ -21,11 +21,11 @@ function Apparts() {
       <div className="apparts__main">
         <div className="apparts__image__container">
           {slides.map((slide, index0) => {
-            return (
-              <div className="box" key={index0}>
-                {slide.title}
-              </div>
-            );
+            // return (
+            //   <div className="box" key={index0}>
+            //     {slide.title}
+            //   </div>
+            // );
           })}
           <Carousel data={slides} />
         </div>
