@@ -14,82 +14,77 @@ function Apparts() {
     .then((response) => console.log(response))
     .catch(console.error);
 
-  for (let i = 0; i < slides.length; i++) {
-    console.log(slides[i].pictures.length);
-    return (
-      <div>
-        <Navbar />
-        <div className="apparts__main">
-          <div className="apparts__image__container">
-            <Carousel data={slides} />
+  return (
+    <div>
+      <Navbar />
+      <div className="apparts__main">
+        <div className="apparts__image__container">
+          <Carousel data={slides} />
+        </div>
+        <div className="apparts__title__and__owner">
+          <div className="apparts__title__subtitle">
+            <h1 className="apparts__title">Cozy loft on Canal Saint-Martin</h1>
+            <p className="apparts__subtitle">Paris, Île-de-France</p>
           </div>
-          <div className="apparts__title__and__owner">
-            <div className="apparts__title__subtitle">
-              <h1 className="apparts__title">
-                Cozy loft on Canal Saint-Martin
-              </h1>
-              <p className="apparts__subtitle">Paris, Île-de-France</p>
+          <div className="apparts__owner__and__rating">
+            <div className="apparts__owner_and__picture">
+              <h4 className="apparts__owner">Alexandre Dumas</h4>
+              <div className="apparts__owner__picture"></div>
             </div>
-            <div className="apparts__owner__and__rating">
-              <div className="apparts__owner_and__picture">
-                <h4 className="apparts__owner">Alexandre Dumas</h4>
-                <div className="apparts__owner__picture"></div>
-              </div>
-              <div className="apparts__owner__and__rating__itself">
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars__grey"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars__grey"
-                />
-              </div>
+            <div className="apparts__owner__and__rating__itself">
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars__grey"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars__grey"
+              />
             </div>
-          </div>
-          <div className="apparts__owner__tag">
-            <div className="cosy">Cosy</div>
-            <div className="canal">Canal</div>
-            <div className="paris10">Paris 10</div>
-          </div>
-          <div className="apparts__accordion">
-            {data.map((item) => (
-              <Accordion defaultActiveKey={0}>
-                <Accordion.Item className="accordion-item">
-                  <Accordion.Header className="apparts__accordion__header">
-                    {item.apparts__accordion__title}
-                  </Accordion.Header>
-                </Accordion.Item>
-                <Accordion.Item className="about__accordion__content">
-                  <Accordion.Body>
-                    {item.apparts__accordion__content}
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-            ))}
           </div>
         </div>
-        <Footer />
+        <div className="apparts__owner__tag">
+          <div className="cosy">Cosy</div>
+          <div className="canal">Canal</div>
+          <div className="paris10">Paris 10</div>
+        </div>
+        <div className="apparts__accordion">
+          {data.map((item, index) => (
+            <Accordion defaultActiveKey={0} key={index}>
+              <Accordion.Item className="accordion-item">
+                <Accordion.Header className="apparts__accordion__header">
+                  {item.apparts__accordion__title}
+                </Accordion.Header>
+              </Accordion.Item>
+              <Accordion.Item className="about__accordion__content">
+                <Accordion.Body>
+                  {item.apparts__accordion__content}
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          ))}
+        </div>
       </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }
 
 const data = [
