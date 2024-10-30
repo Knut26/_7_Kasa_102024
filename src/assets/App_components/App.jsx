@@ -19,10 +19,9 @@ function App(props) {
       <div className="body">
         <Navbar />
         <Banner />
-        {slides.map((slide) => {
-          console.log(slide);
-        })}
-        <Cards title="tesssteu" />;
+        {slides.map((slide) => (
+          <Cards title={slide.title} img={slide.cover} />
+        ))}
       </div>
       <div className="footer">
         <Footer />

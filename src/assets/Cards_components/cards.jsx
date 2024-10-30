@@ -12,6 +12,7 @@ function Cards(props) {
     <div className="cards__container">
       <div className="card">
         <Link to="/apparts">
+          <img src={props.img} alt="image" />
           <p className="card__text">{props.title}</p>
         </Link>
       </div>
@@ -20,27 +21,3 @@ function Cards(props) {
 }
 
 export default Cards;
-/*import React from "react";
-import { Outlet, Link } from "react-router-dom";
-
-function Cards() {
-  fetch("src/images/appartements.json")
-    .then((res) => res.json())
-    .then((data) => {
-      //.catch(console.error);
-      for (let i = 0; i < data.length; i++) {
-        const appartsTitle = data[i].title;
-
-        return (
-          <div className="cards__container">
-            <div className="card">
-              <Link to="/apparts">{appartsTitle}</Link>
-            </div>
-          </div>
-        );
-      }
-    });
-}
-
-export default Cards;
- */
