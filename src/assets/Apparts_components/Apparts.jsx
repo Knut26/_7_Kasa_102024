@@ -4,8 +4,7 @@ import Footer from "../Footer_components/footer";
 import Carousel from "../Carousel_components/carousel.jsx";
 import "../Carousel_components/carousel.scss";
 import "../Apparts_components/apparts.scss";
-import slides from "../../images/appartements.json";
-import { Accordion, AccordionItem } from "react-bootstrap";
+import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
@@ -15,11 +14,11 @@ function Apparts() {
   const location = useLocation();
   const navigate = useNavigate();
   const { id } = useParams();
-  const [appartment, setAppartment] = useState(null);
+  const [appartment, setAppartment] = useState();
 
-  console.log(location, "dfdddbvedrgfbedfbfedvbfd");
+  console.log(location);
 
-  const [selectedFlat, setSelectedFlat] = useState(null);
+  const [selectedFlat, setSelectedFlat] = useState();
 
   useEffect(fetchAppartment, []);
 
@@ -34,13 +33,7 @@ function Apparts() {
     <div>
       <Navbar />
       {JSON.stringify(selectedFlat)}
-      {/* {console.log(images)} */}
-
       <div className="apparts__main">
-        {/* <div className="apparts__image__container">
-            <Carousel data={slides} />
-          </div> */}
-
         <div className="apparts__image__container">
           {<Carousel images={appartment.pictures} title={appartment.title} />}
         </div>
@@ -115,7 +108,7 @@ function Apparts() {
       <Footer />
     </div>
   ) : (
-    <p>dfgldfgdfgdf</p>
+    <p>error</p>
   );
 }
 

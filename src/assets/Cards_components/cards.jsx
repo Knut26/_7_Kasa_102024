@@ -2,10 +2,8 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
 function Cards(props) {
-  //console.log(props);
   fetch("src/images/appartements.json")
     .then((res) => res.json())
-    //.then((response) => console.log(response))
     .catch(console.error);
 
   const flatId = {
