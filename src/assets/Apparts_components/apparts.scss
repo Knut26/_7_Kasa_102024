@@ -76,20 +76,18 @@
     gap: 20px;
     margin-left: 150px;
     margin-bottom: 40px;
-  }
-}
 
-.cosy,
-.canal,
-.paris10 {
-  border: 1px solid red;
-  border-radius: 25px;
-  background-color: #ff6060;
-  color: white;
-  font-size: 20px;
-  width: 150px;
-  //padding-inline: 20px;////////////////pas sûr
-  padding-block: 2px;
+    &__itself {
+      border: 1px solid red;
+      border-radius: 25px;
+      background-color: #ff6060;
+      color: white;
+      font-size: 20px;
+      width: 150px;
+      //padding-inline: 20px;////////////////pas sûr
+      padding-block: 2px;
+    }
+  }
 }
 
 $accordion-button-bg: #ff6060;

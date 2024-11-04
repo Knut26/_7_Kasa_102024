@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./carousel.scss";
 //import { slides } from "../../images/appartements.json";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export const Carousel = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   const [carousel__slides, carousel__setSlides] = useState(0);
 
   const nextSlide = () => {
