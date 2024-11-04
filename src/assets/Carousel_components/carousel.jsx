@@ -19,7 +19,7 @@ const Carousel = () => {
         }));
         setImages(data);
         // setImages(filteredImages);
-        console.log(filteredImages);
+        //console.log(filteredImages);
       })
       .catch(console.error);
   });

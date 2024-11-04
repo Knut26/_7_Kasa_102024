@@ -8,8 +8,11 @@ import slides from "../../images/appartements.json";
 import { Accordion, AccordionItem } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
+import { useLocation } from "react-router-dom";
 
-function Apparts(props) {
+function Apparts() {
+  const location = useLocation();
+  console.log(location);
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -19,9 +22,24 @@ function Apparts(props) {
       .catch(console.error);
   });
 
+  const [selectedFlat, setSelectedFlat] = useState(null);
+
+  useEffect(appartsData, []);
+
+  function appartsData() {
+    fetch("src/images/appartements.json")
+      .then((res) => res.json())
+      .then((response) => {
+        const flat = response.find((flat) => flat.id === slides.id);
+        setSelectedFlat(flat);
+        console.log("appartement selectionné : ", selectedFlat);
+      });
+  }
+
   return (
     <div>
       <Navbar />
+      {JSON.stringify(selectedFlat)}
       {/* {console.log(images)} */}
       {images.map((item, index) => (
         <div className="apparts__main">

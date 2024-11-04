@@ -10,8 +10,7 @@ import slides from "../../images/appartements.json";
 import Footer from "../Footer_components/footer.jsx";
 import "../Footer_components/footer.scss";
 
-function App(props) {
-  //console.log(props);
+function App() {
   return (
     <div>
       <div className="body">
@@ -19,7 +18,12 @@ function App(props) {
         <Banner />
         <div className="cards__container">
           {slides.map((slide, index1) => (
-            <Cards title={slide.title} img={slide.cover} key={index1} />
+            <Cards
+              title={slide.title}
+              img={slide.cover}
+              id={slide.id}
+              key={index1}
+            />
           ))}
         </div>
       </div>

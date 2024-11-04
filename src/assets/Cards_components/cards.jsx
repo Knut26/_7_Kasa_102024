@@ -8,9 +8,13 @@ function Cards(props) {
     //.then((response) => console.log(response))
     .catch(console.error);
 
+  const flatId = {
+    appartId: props.id,
+  };
+  console.log(flatId);
   return (
     <div className="card">
-      <Link to="/apparts">
+      <Link to="/apparts" state={flatId}>
         <img src={props.img} className="app__img" alt="image" />
         <p className="card__text">{props.title}</p>
       </Link>
