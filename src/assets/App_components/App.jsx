@@ -17,12 +17,12 @@ function App() {
         <Navbar />
         <Banner />
         <div className="cards__container">
-          {slides.map((slide, index1) => (
+          {slides.map((slide) => (
             <Cards
               title={slide.title}
               img={slide.cover}
               id={slide.id}
-              key={index1}
+              key={slide.id}
             />
           ))}
         </div>

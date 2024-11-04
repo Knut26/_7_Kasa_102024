@@ -8,118 +8,114 @@ import slides from "../../images/appartements.json";
 import { Accordion, AccordionItem } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
+import appartments from "../../images/appartements.json";
 
 function Apparts() {
   const location = useLocation();
-  console.log(location);
-  const [images, setImages] = useState([]);
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const [appartment, setAppartment] = useState(null);
 
-  useEffect(() => {
-    fetch("src/images/appartements.json")
-      .then((res) => res.json())
-      .then((data) => setImages(data))
-      .catch(console.error);
-  });
+  console.log(location, "dfdddbvedrgfbedfbfedvbfd");
 
   const [selectedFlat, setSelectedFlat] = useState(null);
 
-  useEffect(appartsData, []);
+  useEffect(fetchAppartment, []);
 
-  function appartsData() {
-    fetch("src/images/appartements.json")
-      .then((res) => res.json())
-      .then((response) => {
-        const flat = response.find((flat) => flat.id === slides.id);
-        setSelectedFlat(flat);
-        console.log("appartement selectionné : ", selectedFlat);
-      });
+  function fetchAppartment() {
+    const flat = appartments.find((flat) => flat.id === id);
+    if (!flat) navigate("/404");
+    setAppartment(flat);
+    console.log("appartement selectionné : ", selectedFlat);
   }
 
-  return (
+  return appartment ? (
     <div>
       <Navbar />
       {JSON.stringify(selectedFlat)}
       {/* {console.log(images)} */}
-      {images.map((item, index) => (
-        <div className="apparts__main">
-          {/* <div className="apparts__image__container">
+
+      <div className="apparts__main">
+        {/* <div className="apparts__image__container">
             <Carousel data={slides} />
           </div> */}
 
-          <div className="apparts__image__container">{<Carousel />}</div>
-          <div className="apparts__title__and__owner">
-            <div className="apparts__title__subtitle">
-              <h1 className="apparts__title" key={index}>
-                {item.title}
-              </h1>
-              <p className="apparts__subtitle">{item.location}</p>
+        <div className="apparts__image__container">
+          {<Carousel images={appartment.pictures} title={appartment.title} />}
+        </div>
+        <div className="apparts__title__and__owner">
+          <div className="apparts__title__subtitle">
+            <h1 className="apparts__title">{appartment.title}</h1>
+            <p className="apparts__subtitle">{appartment.location}</p>
+          </div>
+          <div className="apparts__owner__and__rating">
+            <div className="apparts__owner_and__picture">
+              <h4 className="apparts__owner">{appartment.host.name}</h4>
+              <div className="apparts__owner__picture"></div>
             </div>
-            <div className="apparts__owner__and__rating">
-              <div className="apparts__owner_and__picture">
-                <h4 className="apparts__owner">{item.host.name}</h4>
-                <div className="apparts__owner__picture"></div>
-              </div>
-              <div className="apparts__owner__and__rating__itself">
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars__grey"
-                />
-                <FontAwesomeIcon
-                  icon={faStarSolid}
-                  size="xl"
-                  className="apparts__owner__rating__stars__grey"
-                />
-              </div>
+            <div className="apparts__owner__and__rating__itself">
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars__grey"
+              />
+              <FontAwesomeIcon
+                icon={faStarSolid}
+                size="xl"
+                className="apparts__owner__rating__stars__grey"
+              />
             </div>
-          </div>
-          <div className="apparts__owner__tag">
-            <div className="apparts__owner__tag__itself">{item.tags}</div>
-          </div>
-          <div className="apparts__accordion">
-            <Accordion defaultActiveKey={0} key={index}>
-              <Accordion.Item className="accordion-item">
-                <Accordion.Header className="apparts__accordion__header">
-                  Description
-                </Accordion.Header>
-              </Accordion.Item>
-              <Accordion.Item className="about__accordion__content">
-                <Accordion.Body>{item.description}</Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          </div>
-          <div className="apparts__accordion">
-            <Accordion defaultActiveKey={0} key={index}>
-              <Accordion.Item className="accordion-item">
-                <Accordion.Header className="apparts__accordion__header">
-                  Equipements
-                </Accordion.Header>
-              </Accordion.Item>
-              <Accordion.Item className="about__accordion__content">
-                <Accordion.Body>{item.equipments}</Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
           </div>
         </div>
-      ))}
+        <div className="apparts__owner__tag">
+          <div className="apparts__owner__tag__itself">{appartment.tags}</div>
+        </div>
+        <div className="apparts__accordion">
+          <Accordion defaultActiveKey={0}>
+            <Accordion.Item className="accordion-item">
+              <Accordion.Header className="apparts__accordion__header">
+                Description
+              </Accordion.Header>
+            </Accordion.Item>
+            <Accordion.Item className="about__accordion__content">
+              <Accordion.Body>{appartment.description}</Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </div>
+        <div className="apparts__accordion">
+          <Accordion defaultActiveKey={0}>
+            <Accordion.Item className="accordion-item">
+              <Accordion.Header className="apparts__accordion__header">
+                Equipements
+              </Accordion.Header>
+            </Accordion.Item>
+            <Accordion.Item className="about__accordion__content">
+              <Accordion.Body>{appartment.equipments}</Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </div>
+      </div>
+
       <Footer />
     </div>
+  ) : (
+    <p>dfgldfgdfgdf</p>
   );
 }
 

@@ -4,25 +4,9 @@ import "./carousel.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 // export const Carousel = ({ data }) => {
-const Carousel = () => {
+const Carousel = ({ images, title }) => {
   // console.log(data);
-  const [images, setImages] = useState([]);
   const [carousel__slides, carousel__setSlides] = useState(0);
-
-  useEffect(() => {
-    fetch("src/images/appartements.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const filteredImages = data.map((item) => ({
-          url: item.pictures,
-          title: item.title,
-        }));
-        setImages(data);
-        // setImages(filteredImages);
-        //console.log(filteredImages);
-      })
-      .catch(console.error);
-  });
 
   const nextSlide = () => {
     carousel__setSlides((carousel__slides) =>
@@ -48,8 +32,8 @@ const Carousel = () => {
                 ? "carousel__slides"
                 : "carousel__slides carousel__slides__hidden"
             }
-            src={item.cover}
-            alt={item.title}
+            src={item}
+            alt={title}
           />
         );
       })}

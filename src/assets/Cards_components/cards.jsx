@@ -14,7 +14,7 @@ function Cards(props) {
   console.log(flatId);
   return (
     <div className="card">
-      <Link to="/apparts" state={flatId}>
+      <Link to={`/apparts/${props.id}`} state={flatId}>
         <img src={props.img} className="app__img" alt="image" />
         <p className="card__text">{props.title}</p>
       </Link>
