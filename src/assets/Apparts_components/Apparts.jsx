@@ -9,7 +9,7 @@ import { Accordion, AccordionItem } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
 
-function Apparts() {
+function Apparts(props) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -25,9 +25,11 @@ function Apparts() {
       {/* {console.log(images)} */}
       {images.map((item, index) => (
         <div className="apparts__main">
-          <div className="apparts__image__container">
+          {/* <div className="apparts__image__container">
             <Carousel data={slides} />
-          </div>
+          </div> */}
+
+          <div className="apparts__image__container">{<Carousel />}</div>
           <div className="apparts__title__and__owner">
             <div className="apparts__title__subtitle">
               <h1 className="apparts__title" key={index}>
