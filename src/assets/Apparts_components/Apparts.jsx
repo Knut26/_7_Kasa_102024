@@ -14,7 +14,7 @@ function Apparts() {
   const location = useLocation();
   const navigate = useNavigate();
   const { id } = useParams();
-  const [appartment, setAppartment] = useState();
+  const [appartment, setAppartment] = useState(null);
 
   console.log(location);
 
