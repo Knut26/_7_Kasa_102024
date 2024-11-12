@@ -79,29 +79,31 @@ function Apparts() {
         <div className="apparts__owner__tag">
           <div className="apparts__owner__tag__itself">{appartment.tags}</div>
         </div>
-        <div className="apparts__accordion">
-          <Accordion defaultActiveKey={0}>
-            <Accordion.Item className="accordion-item">
-              <Accordion.Header className="apparts__accordion__header">
-                Description
-              </Accordion.Header>
-            </Accordion.Item>
-            <Accordion.Item className="about__accordion__content">
-              <Accordion.Body>{appartment.description}</Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
-        </div>
-        <div className="apparts__accordion">
-          <Accordion defaultActiveKey={0}>
-            <Accordion.Item className="accordion-item">
-              <Accordion.Header className="apparts__accordion__header">
-                Equipements
-              </Accordion.Header>
-            </Accordion.Item>
-            <Accordion.Item className="about__accordion__content">
-              <Accordion.Body>{appartment.equipments}</Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
+        <div className="accordionAll">
+          <div className="apparts__accordion">
+            <Accordion defaultActiveKey={0}>
+              <Accordion.Item className="accordion-item">
+                <Accordion.Header className="apparts__accordion__header">
+                  Description
+                </Accordion.Header>
+              </Accordion.Item>
+              <Accordion.Item className="about__accordion__content">
+                <Accordion.Body>{appartment.description}</Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          </div>
+          <div className="apparts__accordion">
+            <Accordion defaultActiveKey={0}>
+              <Accordion.Item className="accordion-item">
+                <Accordion.Header className="apparts__accordion__header">
+                  Equipements
+                </Accordion.Header>
+              </Accordion.Item>
+              <Accordion.Item className="about__accordion__content">
+                <Accordion.Body>{appartment.equipments}</Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          </div>
         </div>
       </div>
 
