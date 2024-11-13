@@ -77,7 +77,11 @@ function Apparts() {
           </div>
         </div>
         <div className="apparts__owner__tag">
-          <div className="apparts__owner__tag__itself">{appartment.tags}</div>
+          <div className="apparts__owner__tag__itself">
+            {appartment.tags.map((tag) => (
+              <p>{tag}</p>
+            ))}
+          </div>
         </div>
         <div className="accordionAll">
           <div className="apparts__accordion">
@@ -100,7 +104,11 @@ function Apparts() {
                 </Accordion.Header>
               </Accordion.Item>
               <Accordion.Item className="about__accordion__content">
-                <Accordion.Body>{appartment.equipments}</Accordion.Body>
+                <Accordion.Body>
+                  {appartment.equipments.map((equipment) => (
+                    <span>{equipment}</span>
+                  ))}
+                </Accordion.Body>
               </Accordion.Item>
             </Accordion>
           </div>
